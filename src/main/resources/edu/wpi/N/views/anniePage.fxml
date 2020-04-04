@@ -9,23 +9,14 @@
    <children>
       <ImageView fitHeight="491.0" fitWidth="878.0" layoutX="244.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../Pictures/SpaceInvader.png" />
+            <Image url="@../images/SpaceInvader.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="610.0" layoutY="644.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../Pictures/SpaceInvaderShip.png" />
+            <Image url="@../images/SpaceInvaderShip.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="218.0" fitWidth="689.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../../../../../Pictures/spaceInvaderPeopple%20(2).jfif" />
-         </image></ImageView>
       <Button fx:id="btn_Annie_home" layoutX="623.0" layoutY="593.0" mnemonicParsing="false" onMouseClicked="#handleOnClick" text="Back to Home Page" />
-      <ImageView fitHeight="215.0" fitWidth="655.0" layoutX="697.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../../../../../Pictures/spaceInvaderPeopple%20(2).jfif" />
-         </image>
-      </ImageView>
    </children>
 </AnchorPane>
