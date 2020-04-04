@@ -10,11 +10,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ColorPicker;
 import javafx.scene.control.Slider;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.paint.Color;
-import javafx.stage.Stage;
-import javax.swing.*;
 import javafx.scene.shape.Arc;
 import javafx.stage.Stage;
+import javax.swing.*;
 
 public class MattController {
 
@@ -40,9 +38,8 @@ public class MattController {
   }
 
   @FXML
-  public void sliderHandler(ActionEvent event) throws IOException {
+  public void sliderHandler(MouseEvent event) throws IOException {
     double value = (double) slider.getValue();
-    //System.
     fillArc.setLength(value);
   }
 }
