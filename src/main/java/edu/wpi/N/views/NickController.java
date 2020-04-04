@@ -9,24 +9,16 @@ import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
-public class HomePageController {
-  @FXML Button btn_Annie;
-  @FXML Button btn_Michael;
-  @FXML Button btn_Nick;
-  @FXML Button btn_Matt;
+public class NickController {
+
+  @FXML Button btn_return;
 
   @FXML
   private void handleOnClick(MouseEvent event) throws IOException {
     Stage stage;
     Parent root;
-    if (event.getSource() == btn_Annie) {
-      stage = (Stage) btn_Annie.getScene().getWindow();
-      root = FXMLLoader.load(getClass().getResource("anniePage.fxml"));
-    } else {
-      stage = (Stage) btn_Nick.getScene().getWindow();
-      root = FXMLLoader.load(getClass().getResource("nickPage.fxml"));
-    }
-
+    stage = (Stage) btn_return.getScene().getWindow();
+    root = FXMLLoader.load(getClass().getResource("homePage.fxml"));
     Scene scene = new Scene(root);
     stage.setScene(scene);
     stage.show();
