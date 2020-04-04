@@ -22,11 +22,13 @@ public class HomePageController {
     if (event.getSource() == btn_Annie) {
       stage = (Stage) btn_Annie.getScene().getWindow();
       root = FXMLLoader.load(getClass().getResource("anniePage.fxml"));
-    } else {
+    } else if (event.getSource() == btn_Nick) {
       stage = (Stage) btn_Nick.getScene().getWindow();
       root = FXMLLoader.load(getClass().getResource("nickPage.fxml"));
+    } else {
+      stage = (Stage) btn_Michael.getScene().getWindow();
+      root = FXMLLoader.load(getClass().getResource("michaelPage.fxml"));
     }
-
     Scene scene = new Scene(root);
     stage.setScene(scene);
     stage.show();
