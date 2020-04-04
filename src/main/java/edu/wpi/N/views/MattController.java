@@ -10,14 +10,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ColorPicker;
 import javafx.scene.control.Slider;
 import javafx.scene.input.MouseEvent;
-<<<<<<< HEAD
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javax.swing.*;
-=======
 import javafx.scene.shape.Arc;
 import javafx.stage.Stage;
->>>>>>> MattWindowBranch
 
 public class MattController {
 
