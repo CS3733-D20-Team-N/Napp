@@ -11,9 +11,9 @@
    <children>
       <FlowPane alignment="CENTER" columnHalignment="CENTER" hgap="30.0" layoutX="558.0" layoutY="221.0" prefHeight="200.0" prefWidth="200.0" vgap="10.0">
          <children>
-            <Arc fill="DODGERBLUE" length="270.0" radiusX="100.0" radiusY="100.0" startAngle="45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" />
-            <Slider blockIncrement="45.0" majorTickUnit="90.0" max="360.0" minorTickCount="30" showTickMarks="true" />
-            <ColorPicker fx:id="colorPicker" promptText="Pick background" />
+            <Arc fx:id="fillArc" fill="DODGERBLUE" length="270.0" radiusX="100.0" radiusY="100.0" startAngle="45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" />
+            <Slider fx:id="slider" blockIncrement="45.0" majorTickUnit="90.0" max="360.0" minorTickCount="30" onMouseReleased="#sliderHandler" showTickMarks="true" />
+            <ColorPicker fx:id="colorPicker" onAction="#colorPickHandle" promptText="Pick background" />
             <Button fx:id="btn_goToMain" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#handleOnClick" text="Main Menu" />
          </children>
       </FlowPane>

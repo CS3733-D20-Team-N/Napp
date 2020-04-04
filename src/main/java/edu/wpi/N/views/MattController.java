@@ -8,15 +8,23 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ColorPicker;
+import javafx.scene.control.Slider;
 import javafx.scene.input.MouseEvent;
+<<<<<<< HEAD
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javax.swing.*;
+=======
+import javafx.scene.shape.Arc;
+import javafx.stage.Stage;
+>>>>>>> MattWindowBranch
 
 public class MattController {
 
   @FXML Button btn_goToMain;
   @FXML ColorPicker colorPicker;
+  @FXML Slider slider;
+  @FXML Arc fillArc;
 
   @FXML
   private void handleOnClick(MouseEvent event) throws IOException {
@@ -30,8 +38,14 @@ public class MattController {
   }
 
   @FXML
-  public void handle(ActionEvent event) throws IOException {
-    Color c = colorPicker.getValue();
-    System.out.println("New Color's RGB = " + c.getRed() + " " + c.getGreen() + " " + c.getBlue());
+  public void colorPickHandle(ActionEvent event) throws IOException {
+    fillArc.setFill(colorPicker.getValue());
+  }
+
+  @FXML
+  public void sliderHandler(ActionEvent event) throws IOException {
+    double value = (double) slider.getValue();
+    //System.
+    fillArc.setLength(value);
   }
 }
