@@ -28,10 +28,9 @@ public class MattController {
   }
 
   public void handle(ActionEvent event) throws IOException {
-      Color c = colorPicker.getValue();
+    Color c = colorPicker.getValue();
 
-      System.out.println("New Color's RGB = "+c.getRed()+" "+c.getGreen()+" "+c.getBlue());
-    }
+    System.out.println("New Color's RGB = "+c.getRed()+" "+c.getGreen()+" "+c.getBlue())
   }
 
 }
