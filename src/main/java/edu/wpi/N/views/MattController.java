@@ -11,6 +11,7 @@ import javafx.scene.control.ColorPicker;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javax.swing.*;
 
 public class MattController {
 
@@ -28,6 +29,7 @@ public class MattController {
     stage.show();
   }
 
+  @FXML
   public void handle(ActionEvent event) throws IOException {
     Color c = colorPicker.getValue();
     System.out.println("New Color's RGB = " + c.getRed() + " " + c.getGreen() + " " + c.getBlue());
