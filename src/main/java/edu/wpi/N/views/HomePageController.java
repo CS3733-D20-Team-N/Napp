@@ -25,9 +25,12 @@ public class HomePageController {
     } else if (event.getSource() == btn_Nick) {
       stage = (Stage) btn_Nick.getScene().getWindow();
       root = FXMLLoader.load(getClass().getResource("nickPage.fxml"));
-    } else {
+    } else if (event.getSource() == btn_Michael) {
       stage = (Stage) btn_Michael.getScene().getWindow();
       root = FXMLLoader.load(getClass().getResource("michaelPage.fxml"));
+    } else {
+      stage = (Stage) btn_Matt.getScene().getWindow();
+      root = FXMLLoader.load(getClass().getResource("mattPage.fxml"));
     }
     Scene scene = new Scene(root);
     stage.setScene(scene);
