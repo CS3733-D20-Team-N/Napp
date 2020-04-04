@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
@@ -8,9 +9,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.N.views.NickController">
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #D3D3D3; -fx-border-color: #D3D3D3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.N.views.NickController">
    <children>
-      <Button fx:id="btn_return" layoutX="249.0" layoutY="188.0" mnemonicParsing="false" onMouseClicked="#handleOnClick" text="Return to Home" />
+      <Button fx:id="btn_return" layoutX="1250.0" layoutY="729.0" mnemonicParsing="false" onMouseClicked="#handleOnClick" text="Return to Home" />
       <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/logo.png" />
@@ -19,5 +20,10 @@
             <Blend />
          </effect>
       </ImageView>
+      <Label layoutX="129.0" layoutY="7.0" text="Brigham and Womens Hospital">
+         <font>
+            <Font name="Arial Bold" size="48.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
