@@ -1,16 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.N.views.HomePageController">
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.N.views.HomePageController">
    <children>
-      <Button fx:id="btn_Annie" layoutX="129.0" layoutY="187.0" mnemonicParsing="false" onMouseClicked="#handleOnClick" text="Annie" />
-      <Button fx:id="btn_Michael" layoutX="271.0" layoutY="187.0" mnemonicParsing="false" onMouseClicked="#handleOnClick" text="Michael" />
-      <Button fx:id="btn_Matt" layoutX="351.0" layoutY="187.0" mnemonicParsing="false" onMouseClicked="#handleOnClick" text="Matt" />
-      <Button fx:id="btn_Nick" layoutX="204.0" layoutY="187.0" mnemonicParsing="false" onMouseClicked="#handleOnClick" text="Nick" />
+      <HBox alignment="CENTER" layoutX="503.0" layoutY="334.0" prefHeight="100.0" prefWidth="358.0">
+         <children>
+            <Button fx:id="btn_Annie" mnemonicParsing="false" onMouseClicked="#handleOnClick" text="Annie" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_Nick" mnemonicParsing="false" onMouseClicked="#handleOnClick" text="Nick" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_Michael" mnemonicParsing="false" onMouseClicked="#handleOnClick" text="Michael" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_Matt" mnemonicParsing="false" onMouseClicked="#handleOnClick" text="Matt" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Label layoutX="477.0" layoutY="240.0" prefHeight="54.0" prefWidth="412.0" text="Click an Option To Navigate To Page" textAlignment="CENTER" textFill="#ff00a1">
+         <font>
+            <Font name="Niagara Engraved" size="48.0" />
+         </font>
+      </Label>
+      <Separator layoutX="482.0" layoutY="295.0" prefHeight="13.0" prefWidth="401.0" style="-fx-background-color: none;" />
    </children>
 </AnchorPane>
