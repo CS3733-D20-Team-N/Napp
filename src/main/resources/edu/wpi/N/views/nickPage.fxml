@@ -6,9 +6,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="edu.wpi.N.views.NickPage"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.N.views.NickController">
+   <children>
+      <Button fx:id="btn_return" layoutX="249.0" layoutY="188.0" mnemonicParsing="false" onMouseClicked="#handleOnClick" text="Return to Home" />
+   </children>
 </AnchorPane>
