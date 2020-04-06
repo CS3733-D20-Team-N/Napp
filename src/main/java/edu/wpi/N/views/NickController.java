@@ -7,11 +7,16 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class NickController {
 
   @FXML Button btn_return;
+
+  @FXML Button btn_ldryRequest;
+
+  @FXML Button btn_Home;
 
   @FXML
   private void handleOnClick(MouseEvent event) throws IOException {
@@ -22,5 +27,37 @@ public class NickController {
     Scene scene = new Scene(root);
     stage.setScene(scene);
     stage.show();
+  }
+
+  @FXML
+  private void laundryClick(MouseEvent e) throws IOException {
+    if (e.getSource() == btn_ldryRequest) {
+      Stage stage;
+      Parent root;
+      stage = new Stage();
+      root = FXMLLoader.load(getClass().getResource("popupWindow.fxml"));
+      stage.setScene(new Scene(root));
+      stage.setTitle("Laundry Request");
+      stage.initModality(Modality.APPLICATION_MODAL);
+      stage.initOwner(btn_ldryRequest.getScene().getWindow());
+      stage.showAndWait();
+    } else {
+      Stage stage;
+      stage = (Stage) btn_Home.getScene().getWindow();
+      stage.close();
+    }
+  }
+
+  @FXML
+  private void homeClick(MouseEvent e) throws IOException {
+    if (e.getSource() == btn_Home) {
+      Stage stage;
+      Parent root;
+      stage = new Stage();
+      root = FXMLLoader.load(getClass().getResource("nickPage.fxml"));
+      stage.setScene(new Scene(root));
+      stage.setTitle("BWH Homepage");
+      stage.show();
+    }
   }
 }

@@ -20,10 +20,11 @@
             <Blend />
          </effect>
       </ImageView>
-      <Label layoutX="129.0" layoutY="7.0" text="Brigham and Womens Hospital">
+      <Label layoutX="138.0" text="Brigham and Womens Hospital">
          <font>
             <Font name="Arial Bold" size="48.0" />
          </font>
       </Label>
+      <Button fx:id="btn_ldryRequest" layoutX="103.0" layoutY="172.0" mnemonicParsing="false" onMouseClicked="#laundryClick" text="Laundry Request" />
    </children>
 </AnchorPane>

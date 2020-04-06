@@ -40,6 +40,7 @@ public class MattController {
   @FXML
   public void sliderHandler(MouseEvent event) throws IOException {
     double value = (double) slider.getValue();
+    // System.
     fillArc.setLength(value);
   }
 }
