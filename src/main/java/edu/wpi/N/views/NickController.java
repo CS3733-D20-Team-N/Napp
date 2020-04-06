@@ -18,6 +18,8 @@ public class NickController {
 
   @FXML Button btn_Home;
 
+  @FXML Button btn_translationRequest;
+
   @FXML
   private void handleOnClick(MouseEvent event) throws IOException {
     Stage stage;
@@ -49,15 +51,21 @@ public class NickController {
   }
 
   @FXML
-  private void homeClick(MouseEvent e) throws IOException {
-    if (e.getSource() == btn_Home) {
+  private void translatorClick(MouseEvent e) throws IOException {
+    if (e.getSource() == btn_translationRequest) {
       Stage stage;
       Parent root;
       stage = new Stage();
-      root = FXMLLoader.load(getClass().getResource("nickPage.fxml"));
+      root = FXMLLoader.load(getClass().getResource("translatorWindow.fxml"));
       stage.setScene(new Scene(root));
-      stage.setTitle("BWH Homepage");
-      stage.show();
+      stage.setTitle("Translation Request");
+      stage.initModality(Modality.APPLICATION_MODAL);
+      stage.initOwner(btn_translationRequest.getScene().getWindow());
+      stage.showAndWait();
+    } else {
+      Stage stage;
+      stage = (Stage) btn_Home.getScene().getWindow();
+      stage.close();
     }
   }
 }

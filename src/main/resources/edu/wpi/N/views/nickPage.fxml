@@ -26,5 +26,6 @@
          </font>
       </Label>
       <Button fx:id="btn_ldryRequest" layoutX="103.0" layoutY="172.0" mnemonicParsing="false" onMouseClicked="#laundryClick" text="Laundry Request" />
+      <Button fx:id="btn_translationRequest" layoutX="103.0" layoutY="213.0" mnemonicParsing="false" onMouseClicked="#translatorClick" text="Translator Request" />
    </children>
 </AnchorPane>
