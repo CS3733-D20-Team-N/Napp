@@ -20,7 +20,7 @@ public class MapExampleController {
   @FXML Button btn_cardiology, btn_mohs, btn_neurology, btn_urology, btn_admin, btn_backToKiosk;
   private double clickStartX, clickStartY;
   private final double MIN_MAP_SCALE = 1; // pane_map scale when zoomed out fully
-  private final double MAX_MAP_SCALE = 3; // pane_map scale when zoomed in fully
+  private final double MAX_MAP_SCALE = 3.5; // pane_map scale when zoomed in fully
   private double mapScaleAlpha = 0; // Zoom value between 0 (out) and 1 (in)
 
   @FXML
@@ -54,19 +54,22 @@ public class MapExampleController {
   @FXML
   private void mapClickHandler(MouseEvent event) throws IOException {
     if (event.getSource() == pane_mapClickTarg) {
-      clickStartX = event.getX();
-      clickStartY = event.getY();
+      clickStartX = event.getSceneX();
+      clickStartY = event.getSceneY();
     }
   }
 
   @FXML
   private void mapDragHandler(MouseEvent event) throws IOException {
     if (event.getSource() == pane_mapClickTarg) {
+      double dragDeltaX = event.getSceneX() - clickStartX;
+      double dragDeltaY = event.getSceneY() - clickStartY;
 
-      double dragDeltaX = event.getX() - clickStartX;
-      double dragDeltaY = event.getY() - clickStartY;
-      double newTranslateX = pane_map.getTranslateX() + dragDeltaX * .1;
-      double newTranslateY = pane_map.getTranslateY() + dragDeltaY * .1;
+      double newTranslateX = pane_map.getTranslateX() + dragDeltaX;
+      double newTranslateY = pane_map.getTranslateY() + dragDeltaY;
+
+      clickStartX = event.getSceneX();
+      clickStartY = event.getSceneY();
 
       pane_map.setTranslateX(newTranslateX);
       pane_map.setTranslateY(newTranslateY);
@@ -77,15 +80,13 @@ public class MapExampleController {
   private void mapScrollHandler(ScrollEvent event) throws IOException {
     if (event.getSource() == pane_mapClickTarg) {
       double deltaY = event.getDeltaY();
-      zoom(deltaY * 0.05);
+      zoom(deltaY * 0.01);
     }
   }
 
   private void zoom(double percent) {
 
     mapScaleAlpha = Math.max(0, Math.min(1, mapScaleAlpha + percent));
-
-    btn_zoomOut.setText("(+) Scale: " + mapScaleAlpha);
 
     // Maps 0-1 value (alpha) to min-max value
     double lerpedScale = MIN_MAP_SCALE + mapScaleAlpha * (MAX_MAP_SCALE - MIN_MAP_SCALE);

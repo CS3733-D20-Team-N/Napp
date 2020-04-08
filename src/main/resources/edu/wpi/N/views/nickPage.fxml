@@ -7,10 +7,11 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #D3D3D3; -fx-border-color: #D3D3D3;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.N.views.NickController">
    <children>
-      <Button fx:id="btn_return" layoutX="1250.0" layoutY="729.0" mnemonicParsing="false" onMouseClicked="#handleOnClick" text="Return to Home" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <Button fx:id="btn_return" layoutX="105.0" layoutY="252.0" mnemonicParsing="false" onMouseClicked="#handleOnClick" text="Return to Home" />
       <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/logo.png" />
@@ -26,5 +27,10 @@
       </Label>
       <Button fx:id="btn_ldryRequest" layoutX="103.0" layoutY="172.0" mnemonicParsing="false" onMouseClicked="#laundryClick" text="Laundry Request" />
       <Button fx:id="btn_translationRequest" layoutX="103.0" layoutY="213.0" mnemonicParsing="false" onMouseClicked="#translatorClick" text="Translator Request" />
+      <Text layoutX="138.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prototype page by Nick Wood">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

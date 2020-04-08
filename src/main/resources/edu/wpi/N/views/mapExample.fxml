@@ -19,9 +19,9 @@
 
 <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.N.views.MapExampleController">
    <children>
-      <SplitPane dividerPositions="0.2783673469387755" layoutX="-4.0" layoutY="-3.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="785.0" prefWidth="1369.0">
+      <SplitPane dividerPositions="0.2783673469387755" layoutX="-4.0" layoutY="-3.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
-          <AnchorPane maxHeight="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="637.0" prefWidth="510.0">
+          <AnchorPane maxHeight="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefWidth="510.0">
                <children>
                   <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
@@ -92,7 +92,7 @@
                   </VBox>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="pane_mapClickTarg" maxHeight="1.7976931348623157E308" onMouseClicked="#mapClickHandler" onMouseDragged="#mapDragHandler" onScroll="#mapScrollHandler" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #807765;">
+            <AnchorPane fx:id="pane_mapClickTarg" maxHeight="1.7976931348623157E308" onMouseDragged="#mapDragHandler" onMousePressed="#mapClickHandler" onScroll="#mapScrollHandler" prefWidth="200.0" style="-fx-background-color: #807765;">
                <children>
                   <StackPane fx:id="pane_map" alignment="TOP_LEFT" onScroll="#mapScrollHandler" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #807765;">
                      <children>
@@ -125,12 +125,12 @@
                               <Font size="24.0" />
                            </font>
                         </Text>
-                        <Button mnemonicParsing="false" onMouseClicked="#zoomToolHandler" prefHeight="40.0" prefWidth="40.0" text="+">
+                        <Button fx:id="btn_zoomIn" mnemonicParsing="false" onMouseClicked="#zoomToolHandler" prefHeight="40.0" prefWidth="40.0" text="+">
                            <font>
                               <Font name="System Bold" size="25.0" />
                            </font>
                         </Button>
-                        <Button mnemonicParsing="false" onMouseClicked="#zoomToolHandler" prefHeight="54.0" prefWidth="51.0" text="-">
+                        <Button fx:id="btn_zoomOut" mnemonicParsing="false" onMouseClicked="#zoomToolHandler" prefHeight="54.0" prefWidth="51.0" text="-">
                            <font>
                               <Font name="System Bold" size="25.0" />
                            </font>
@@ -143,8 +143,6 @@
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </padding>
                   </HBox>
-                  <Text fx:id="text_dragX" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0" />
-                  <Text fx:id="text_dragY" layoutX="60.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="50.0" />
                </children>
             </AnchorPane>
         </items>
