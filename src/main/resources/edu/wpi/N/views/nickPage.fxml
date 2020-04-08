@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.image.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #D3D3D3; -fx-border-color: #D3D3D3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.N.views.NickController">
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #D3D3D3; -fx-border-color: #D3D3D3;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.wpi.N.views.NickController">
    <children>
-      <Button fx:id="btn_return" layoutX="1250.0" layoutY="729.0" mnemonicParsing="false" onMouseClicked="#handleOnClick" text="Return to Home" />
+      <Button fx:id="btn_return" layoutX="1250.0" layoutY="729.0" mnemonicParsing="false" onMouseClicked="#handleOnClick" text="Return to Home" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
       <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/logo.png" />

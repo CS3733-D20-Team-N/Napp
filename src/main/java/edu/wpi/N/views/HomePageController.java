@@ -14,6 +14,7 @@ public class HomePageController {
   @FXML Button btn_Michael;
   @FXML Button btn_Nick;
   @FXML Button btn_Matt;
+  @FXML Button btn_backToKiosk;
 
   @FXML
   private void handleOnClick(MouseEvent event) throws IOException {
@@ -28,9 +29,12 @@ public class HomePageController {
     } else if (event.getSource() == btn_Michael) {
       stage = (Stage) btn_Michael.getScene().getWindow();
       root = FXMLLoader.load(getClass().getResource("michaelPage.fxml"));
-    } else {
+    } else if (event.getSource() == btn_Matt) {
       stage = (Stage) btn_Matt.getScene().getWindow();
       root = FXMLLoader.load(getClass().getResource("mattPage.fxml"));
+    } else {
+      stage = (Stage) btn_backToKiosk.getScene().getWindow();
+      root = FXMLLoader.load(getClass().getResource("kioskHome.fxml"));
     }
     Scene scene = new Scene(root);
     stage.setScene(scene);
